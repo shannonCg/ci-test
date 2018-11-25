@@ -1,11 +1,11 @@
 language: java
 jdk:
   - openjdk8
-#sudo: false
-#script: mvn install
-before_install:
-  - mvn compile -DskipTests=true -U
-install: mvn test
+sudo: false
+script: mvn install
+#before_install:
+#  - mvn compile -DskipTests=true -U
+#install: mvn test
 branches:
   only:
-    - release
+    - master
