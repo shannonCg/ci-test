@@ -26,6 +26,23 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<!-- spring web end -->
+		
+		<!-- junit start -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!--  junit end -->
+		
+		<!-- mockito start -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- mockito end -->
 	</dependencies>
 	
 	<build>
