@@ -31,12 +31,14 @@ jobs:
           - v1-dependencies-
 
       - run: mvn dependency:go-offline
-
+      
+      - run: mvn de.qaware.maven:go-offline-maven-plugin:1.0.0:resolve-dependencies -Dmaven.repo.local=.m2/repository
+           
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-           
+            
       # run tests!
       - run: mvn install
       
