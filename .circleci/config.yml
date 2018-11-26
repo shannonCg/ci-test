@@ -18,7 +18,7 @@ jobs:
 
     environment:
       # Customize the JVM maximum heap limit
-      MAVEN_OPTS: -Xmx3200m
+      MAVEN_OPTS: -Xmx3300m
     
     steps:
       - checkout
@@ -36,12 +36,12 @@ jobs:
           paths:
             - ~/.m2
           key: v1-dependencies-{{ checksum "pom.xml" }}
-      
-      - store_test_results:
-          path: target/surefire-reports
-      
+           
       # run tests!
       - run: mvn install
+      
+       - store_test_results:
+          path: target/surefire-reports
       
       #- store_artifacts:
       #    path: target
